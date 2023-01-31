@@ -57,7 +57,12 @@ jobs:
     env:
       HUGO_VERSION: 0.108.0
     steps:
-      - run: echo ${{needs.buildCSS.outputs.style}}
+      - name: Download style.css
+        uses: actions/download-artifact@master
+        with:
+          name: style.css
+          path: assets/style.css
+      - run: find .
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
@@ -71,11 +76,6 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      - name: Download style.css
-        uses: actions/download-artifact@master
-        with:
-          name: style.css
-          path: assets/style.css
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
