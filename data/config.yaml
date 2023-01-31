@@ -1,0 +1,84 @@
+title: "My Dashboard"
+subtitle: "My Subtitle"
+svgIcon: "no-icon"
+
+links:
+  - name: Link 1
+    url: https://www.google.de/
+    icon: fas-house
+  - name: Link 2
+    url: https://github.com/
+  - name: Link 3
+    url: https://www.youtube.com/
+    icon: fab-docker
+    
+services:
+  - name: Group 1
+    icon: fab-docker
+    items:
+      - name: "Service 1"
+        subtitle: "This is Service 1"
+        url: "http://localhost:8000/"
+        tag: "Docker"
+        icon: "no-icon"
+      - name: "Service 2"
+        subtitle: "This is Service 2"
+      - name: "Service 3"
+        tag: "Other"
+  - name: Group 2
+    icon: fas-database
+    items:
+      - name: "Service 2"
+        subtitle: "This is Service 2"
+      - name: "Service 3"
+  - name: Group 3
+    icon: fas-pen
+    items:
+      - name: "Service 1"
+        subtitle: "This is Service 1"
+      - name: "Service 2"
+        subtitle: "This is Service 2"
+        tag: "API"
+      - name: "Service 3"
+        icon: "fas-pen"
+  - name: Group 4
+    icon: fas-desktop
+    items:
+      - name: "Service 1"
+        subtitle: "This is Service 1"
+      - name: "Service 2"
+        subtitle: "This is Service 2! This is Service 2! This is Service 2!"
+
+  - name: Group 5
+    icon: fab-docker
+    items:
+      - name: "Service 1"
+        subtitle: "This is Service 1"
+        url: "http://localhost:8000/"
+      - name: "Service 2"
+        subtitle: "This is Service 2"
+      - name: "Service 3"
+        icon: fab-docker
+  - name: Group 6
+    icon: fas-database
+    items:
+      - name: "Service 2"
+        subtitle: "This is Service 2"
+      - name: "Service 3"
+  - name: Group 7
+    icon: fas-pen
+    items:
+      - name: "Service 1"
+        subtitle: "This is Service 1"
+      - name: "Service 2"
+        subtitle: "This is Service 2"
+      - name: "Service 3"
+  - name: Group 8
+    icon: fas-desktop
+    items:
+      - name: "Service 1"
+        subtitle: "This is Service 1!!!!!!!!!!!!!!!!!!"
+      - name: "Service 2"
+        subtitle: "This is Service 2"
+
+
