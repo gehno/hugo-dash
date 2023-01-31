@@ -1,37 +1,47 @@
 {{ define "main" }}
-<div id="home-jumbotron" class="jumbotron text-center">
-  <div> {{ index .Site.Data.config.title }}</div>
-  <div> {{ index .Site.Data.config.subtitle }}</div>
-  <div> {{ index .Site.Data.config.svgIcon }}</div>
-
+<div class="headline">
   <div>
-    {{ range .Site.Data.config.links }}
-    <div>
-      <div> {{.name}}</div>
-      <div> {{.url}}</div>
-      <div> {{.icon}}</div>
-    </div>
-    {{ end }}
+    <div class="text-3xl font-bold"> {{ index .Site.Data.config.title }}</div>
+    <div class="text-2xl"> {{ index .Site.Data.config.subtitle }}</div>
   </div>
-
   <div>
-    {{range .Site.Data.config.services}}
-    <div>
-      <div> {{.name}}</div>
+    <div class="nav-bar">
+      {{ range .Site.Data.config.links }}
+      <a href={{.url}} target="_blank" class="nav-item">
+        <div class="">{{.icon}}</div>
+        <div class="font-bold">{{.name}}</div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<div class="card-layout">
+
+
+  {{range .Site.Data.config.services}}
+  <div class="card-group">
+    <div class="card-group-text">
       <div> {{.icon}}</div>
-      <div>{{ range .items }}
+      <div class="text-2xl font-semibold"> {{.name}}</div>
+    </div>
+
+
+    <div>{{ range .items }}
+      <a class="link-card group" href='{{.url}}' target="_blank">
+        <div class="w-12 h-12"> {{.icon}}</div>
         <div>
-          <div> {{.name}}</div>
-          <div> {{.subtitle}}</div>
-          <div> {{.url}}</div>
-          <div> {{.tag}}</div>
-          <div> {{.icon}}</div>
+          <p class="text-xl font-semibold">{{.name}}</p>
+          <p class="text-base">{{.subtitle}}</p>
         </div>
-        {{ end }}
-      </div>
+        <div class="card-tag">
+          <div class="m-1 overflow-hidden center">{{.tag}}</div>
+        </div>
+      </a>
+      {{ end }}
     </div>
-    {{end}}
   </div>
+  {{end}}
 
 </div>
 {{ end }}
