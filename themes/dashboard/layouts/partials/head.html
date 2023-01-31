@@ -5,3 +5,5 @@
 <meta name="description" content={{ index .Site.Data.config.subtitle }} data-gatsby-head="true">
 {{ $styles := resources.Get "style.css" }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+{{ $fontawesome := resources.Get "fontawesome/all.js" }}
+<script defer src="{{ $fontawesome.RelPermalink }}"></script>
