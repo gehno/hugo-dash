@@ -7,3 +7,8 @@
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 {{ $fontawesome := resources.Get "fontawesome/all.js" }}
 <script defer src="{{ $fontawesome.RelPermalink }}"></script>
+
+{{ $icon := resources.Get (printf "icons/%s.svg" .Site.Data.config.icon) }}
+{{ if $icon }}
+<link rel="icon" type="image/x-icon" href="{{$icon.RelPermalink}}">
+{{ end }}

@@ -20,7 +20,7 @@
   {{range .Site.Data.config.services}}
   <div class="card-group">
     <div class="card-group-text">
-      <div>{{ partial "fa" (dict "icon" .icon "size" 8 )}}</div>
+      <div class="w-8 h-8">{{ partial "fa" (dict "icon" .icon "size" 8 )}}</div>
       <div class="text-2xl font-semibold">{{.name}}</div>
     </div>
 

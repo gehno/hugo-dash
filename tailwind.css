@@ -33,7 +33,7 @@
 }
 
 .footline {
-  @apply fixed inset-x-0 bottom-0 p-2 text-center bg-opacity-50 bg-secondary-50 dark:bg-secondary-800 dark:bg-opacity-50;
+  @apply fixed inset-x-0 bottom-0 p-2 text-center bg-opacity-50 bg-secondary-50 dark:bg-secondary-800 dark:bg-opacity-50 text-black dark:text-white;
 }
 
 .card-layout {
