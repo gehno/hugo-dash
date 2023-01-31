@@ -11,3 +11,7 @@ hugo.linux
 
 # Temporary lock file while building
 /.hugo_build.lock
+
+# Tailwind
+node_modules
+assets/style.css
