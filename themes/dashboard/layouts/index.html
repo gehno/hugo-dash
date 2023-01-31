@@ -1,5 +1,37 @@
 {{ define "main" }}
 <div id="home-jumbotron" class="jumbotron text-center">
-  <h1 class="title">{{ .Site.Title }}</h1>
+  <div> {{ index .Site.Data.config.title }}</div>
+  <div> {{ index .Site.Data.config.subtitle }}</div>
+  <div> {{ index .Site.Data.config.svgIcon }}</div>
+
+  <div>
+    {{ range .Site.Data.config.links }}
+    <div>
+      <div> {{.name}}</div>
+      <div> {{.url}}</div>
+      <div> {{.icon}}</div>
+    </div>
+    {{ end }}
+  </div>
+
+  <div>
+    {{range .Site.Data.config.services}}
+    <div>
+      <div> {{.name}}</div>
+      <div> {{.icon}}</div>
+      <div>{{ range .items }}
+        <div>
+          <div> {{.name}}</div>
+          <div> {{.subtitle}}</div>
+          <div> {{.url}}</div>
+          <div> {{.tag}}</div>
+          <div> {{.icon}}</div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{end}}
+  </div>
+
 </div>
 {{ end }}
