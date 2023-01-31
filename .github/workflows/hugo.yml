@@ -61,8 +61,8 @@ jobs:
         uses: actions/download-artifact@master
         with:
           path: assets
-      - run: find .
       - run: mv assets/style/style.css assets/style.css
+      - run: rm -rf assets/style
       - run: find .
       - name: Install Hugo CLI
         run: |
