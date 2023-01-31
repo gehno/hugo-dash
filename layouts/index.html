@@ -8,7 +8,7 @@
     <div class="nav-bar">
       {{ range .Site.Data.config.links }}
       <a href="{{.url}}" target="_blank" class="nav-item">
-        <div>{{ partial "fa16" .icon}}</div>
+        <div>{{ partial "fa"  (dict "icon" .icon "size" 4 )}}</div>
         <div class="font-bold">{{.name}}</div>
       </a>
       {{ end }}
@@ -20,21 +20,19 @@
   {{range .Site.Data.config.services}}
   <div class="card-group">
     <div class="card-group-text">
-      <div>{{ partial "fa32" .icon}}</div>
+      <div>{{ partial "fa" (dict "icon" .icon "size" 8 )}}</div>
       <div class="text-2xl font-semibold">{{.name}}</div>
     </div>
 
     <div>
       {{ range .items }}
       <a class="link-card group" href="{{.url}}" target="_blank">
-        <div class="w-12 h-12">{{partial "svg" .icon }}</div>
+        <div>{{partial "svg" .icon }}</div>
         <div>
           <p class="text-xl font-semibold">{{.name}}</p>
           <p class="text-base">{{.subtitle}}</p>
         </div>
-        <div class="card-tag">
-          <div class="m-1 overflow-hidden center">{{.tag}}</div>
-        </div>
+        {{ partial "card-tag" . }}
       </a>
       {{ end }}
     </div>
