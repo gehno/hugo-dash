@@ -1,6 +1,6 @@
 #/bin/bash
 echo "build tailwind"
-npm run build
+npm run watch&
 echo "start server"
 hugo server --disableFastRender
 
