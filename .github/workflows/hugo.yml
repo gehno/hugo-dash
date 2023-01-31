@@ -26,18 +26,39 @@ defaults:
     shell: bash
 
 jobs:
+  buildCSS:
+    outputs: 
+       style: '/assets/style.css'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run install
+    - run: npm build
+
   # Build job
   build:
+    needs: [buildCSS]
     runs-on: ubuntu-latest
+    
     env:
       HUGO_VERSION: 0.108.0
     steps:
+      - run: echo ${{needs.buildCSS.outputs.style}}
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-      - name: Install Dart Sass Embedded
-        run: sudo snap install dart-sass-embedded
       - name: Checkout
         uses: actions/checkout@v3
         with:
