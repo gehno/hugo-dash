@@ -1,6 +1,6 @@
-title: "My Dashboard"
-subtitle: "My Subtitle"
-icon: "other-icon"
+title: My Dashboard
+subtitle: My Subtitle
+icon: other-icon
 
 links:
   - name: Link 1
@@ -16,70 +16,61 @@ services:
   - name: Group 1
     icon: fa-brands fa-docker
     items:
-      - name: "Service 1"
-        subtitle: "This is Service 1"
-        url: "http://localhost:8000/"
-        tag: "Docker"
-        icon: "no-icon"
-      - name: "Service 2"
-        subtitle: "This is Service 2"
-      - name: "Service 3"
-        tag: "Other"
-  - name: Group 2
-    icon: fa-solid fa-database
-    items:
-      - name: "Service 2"
-        subtitle: "This is Service 2"
-      - name: "Service 3"
-  - name: Group 3
-    icon: fa-solid fa-pen
-    items:
-      - name: "Service 1"
-        subtitle: "This is Service 1"
-      - name: "Service 2"
-        subtitle: "This is Service 2"
-        tag: "API"
-        icon: "other-icon"
-      - name: "Service 3"
-        icon: "fa-solid fa-pen"
-  - name: Group 4
-    icon: fa-solid fa-desktop
-    items:
-      - name: "Service 1"
-        subtitle: "This is Service 1"
-      - name: "Service 2"
-        subtitle: "This is Service 2! This is Service 2! This is Service 2!"
+      - name: Service 1
+        subtitle: This is Service 1
+        url: http://localhost:8000/
+        tag: Docker
+        icon: no-icon
+      - name: Service 2
+        subtitle: This is Service 2
+        url: http://localhost:8000/
+        icon: other-icon
+        tag: Other
+      - name: Service 3
 
-  - name: Group 5
-    icon: fa-brands fa-docker
+  - name: Dummy Group 1
+    icon: fa-solid fa-house
     items:
-      - name: "Service 1"
-        subtitle: "This is Service 1"
-        url: "http://localhost:8000/"
-      - name: "Service 2"
-        subtitle: "This is Service 2"
-      - name: "Service 3"
-        icon: fa-brands fa-docker
-  - name: Group 6
-    icon: fa-solid fa-database
+      - name: Service 1
+      - name: Service 2
+      - name: Service 3
+
+  - name: Dummy Group 2
+    icon: fa-solid fa-house
     items:
-      - name: "Service 2"
-        subtitle: "This is Service 2"
-      - name: "Service 3"
-  - name: Group 7
-    icon: fa-solid fa-pen
+      - name: Service 1
+      - name: Service 2
+      - name: Service 3
+
+  - name: Dummy Group 3
+    icon: fa-solid fa-house
     items:
-      - name: "Service 1"
-        subtitle: "This is Service 1"
-      - name: "Service 2"
-        subtitle: "This is Service 2"
-      - name: "Service 3"
-  - name: Group 8
-    icon: fa-solid fa-desktop
+      - name: Service 1
+      - name: Service 2
+      - name: Service 3
+
+  - name: Dummy Group 4
+    icon: fa-solid fa-house
     items:
-      - name: "Service 1"
-        subtitle: "This is Service 1!!!!!!!!!!!!!!!!!!"
-      - name: "Service 2"
-        subtitle: "This is Service 2"
+      - name: Service 1
+      - name: Service 2
+      - name: Service 3
+
+  - name: Dummy Group 5
+    icon: fa-solid fa-house
+    items:
+      - name: Service 1
+      - name: Service 2
+      - name: Service 3
+
+  - name: Dummy Group 6
+    icon: fa-solid fa-house
+    items:
+      - name: Service 1
+      - name: Service 2
+      - name: Service 3
+
+
+
 
 
