@@ -46,7 +46,6 @@ jobs:
     - name: Upload style.css
       uses: actions/upload-artifact@master
       with:
-        name: style.css
         path: assets/style.css
 
   # Build job
@@ -60,8 +59,7 @@ jobs:
       - name: Download style.css
         uses: actions/download-artifact@master
         with:
-          name: style.css
-          path: assets/style.css
+          path: assets
       - run: find .
       - name: Install Hugo CLI
         run: |
