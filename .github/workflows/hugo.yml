@@ -43,7 +43,8 @@ jobs:
     - run: npm ci
     - run: npm install
     - run: npm run build
-    - uses: actions/upload-artifact@master
+    - name: Upload style.css
+      uses: actions/upload-artifact@master
       with:
         name: style.css
         path: assets/style.css
@@ -70,6 +71,11 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Download style.css
+        uses: actions/download-artifact@master
+        with:
+          name: style.css
+          path: assets/style.css
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
