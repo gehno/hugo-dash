@@ -27,8 +27,6 @@ defaults:
 
 jobs:
   buildCSS:
-    outputs: 
-       style: '/assets/style.css'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -45,6 +43,10 @@ jobs:
     - run: npm ci
     - run: npm install
     - run: npm run build
+    - uses: actions/upload-artifact@master
+      with:
+        name: style.css
+        path: assets/style.css
 
   # Build job
   build:
