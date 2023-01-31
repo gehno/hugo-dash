@@ -77,7 +77,6 @@ jobs:
           path: assets
       - run: mv assets/style/style.css assets/style.css
       - run: rm -rf assets/style
-      - run: find .
       
       - name: Build with Hugo
         env:
