@@ -1,9 +1,6 @@
 {{ define "main" }}
 <div class="headline">
-  <div>
-    <div class="text-3xl font-bold">{{ index .Site.Data.config.title }}</div>
-    <div class="text-2xl">{{ index .Site.Data.config.subtitle }}</div>
-  </div>
+{{ partial "title" .Site.Data.config }}
   <div>
     <div class="nav-bar">
       {{ range .Site.Data.config.links }}

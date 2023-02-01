@@ -1,3 +1,7 @@
+#
+# This is a demo page.
+# Every single entry you see here is optional.
+# 
 title: My Dashboard
 subtitle: My Subtitle
 icon: other-icon
@@ -69,8 +73,3 @@ services:
       - name: Service 1
       - name: Service 2
       - name: Service 3
-
-
-
-
-

@@ -1,8 +1,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>{{ index .Site.Data.config.title }}</title>
-<meta name="description" content={{ index .Site.Data.config.subtitle }} data-gatsby-head="true">
+{{$title:=.Site.Data.config.title}}
+{{ if $title }}
+<title>{{ index $title }}</title>
+{{ end }}
+
+{{$subtitle:=.Site.Data.config.subtitle}}
+{{ if $subtitle }}
+<meta name="description" content={{ index $subtitle }} data-gatsby-head="true">
+{{ end }}
+
+
 {{ $styles := resources.Get "style.css" }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 {{ $fontawesome := resources.Get "fontawesome/all.js" }}
