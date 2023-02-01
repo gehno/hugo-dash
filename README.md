@@ -16,8 +16,14 @@ fully static link collection dashboard created with hugo and tailwind
 npm install
 ```
 
-### Run
+### Run Local Server
 
 ```shell
 ./run.sh
 ```
+
+## Installation
+
+### docker-compose
+
+There is a [minimal](/docker-compose/minimal/docker-compose.yaml) and a [nginx](/docker-compose/nginx/docker-compose.yaml) configuration.
