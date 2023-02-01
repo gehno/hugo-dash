@@ -22,6 +22,23 @@ npm install
 ./run.sh
 ```
 
+### Build with Docker
+
+```shell
+docker build -t hugo-dash . 
+```
+
+### Run with Docker
+
+```shell
+docker run -it \
+-v ~/hugo/data:/src/data \
+-v ~/hugo/icons:/src/assets/icons/ \
+-p 1313:1313 \
+hugo-dash
+/
+```
+
 ## Installation
 
 ### docker-compose

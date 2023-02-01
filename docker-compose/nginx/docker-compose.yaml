@@ -5,6 +5,7 @@ services:
     image: ghcr.io/gehno/hugo-dash
     volumes:
        - ~/hugo/data:/src/data/
+       - ~/hugo/icons:/src/assets/icons/
        - site:/src/public/
 
   nginx: 
