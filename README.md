@@ -12,6 +12,11 @@ Fully static,responsive,customizable link collection dashboard created with hugo
 
 ## Development
 
+### Prerequisites
+
+- hugo
+- npm
+
 ### Setup
 
 ```shell
