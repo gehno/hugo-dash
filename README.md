@@ -1,5 +1,7 @@
 # hugo-dash
-fully static link collection dashboard created with hugo and tailwind
+Fully static,responsive,customizable link collection dashboard created with hugo and tailwind. 
+
+![image](https://user-images.githubusercontent.com/75833801/216191320-7e7a5189-9053-4e3f-85f9-180a08802244.png)
 
 ## Used Technologies
 
@@ -45,7 +47,7 @@ hugo-dash
 
 There is a [minimal](/docker-compose/minimal/docker-compose.yaml) and a [nginx](/docker-compose/nginx/docker-compose.yaml) configuration.
 
+## Configuration
 
-## Example Page
-
-![image](https://user-images.githubusercontent.com/75833801/216191320-7e7a5189-9053-4e3f-85f9-180a08802244.png)
+- [config.yaml](/data/config.yaml)
+- [icons](/assets/icons/)
