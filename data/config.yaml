@@ -2,35 +2,35 @@
 # This is a demo page.
 # Every single entry you see here is optional.
 # 
-title: My Dashboard
-subtitle: My Subtitle
+title: Demo Dashboard
+subtitle: Demo Link Collection
 icon: other-icon
 
 links:
-  - name: Link 1
-    url: https://www.google.de/
-    icon: fa-solid fa-house
-  - name: Link 2
-    url: https://github.com/
-  - name: Link 3
-    url: https://www.youtube.com/
-    icon: fa-brands fa-docker
+  - name: Hugo-Dash
+    url: https://github.com/gehno/hugo-dash/
+    icon: fa-brands fa-github
     
 services:
-  - name: Group 1
-    icon: fa-brands fa-docker
+  - name: Color Services
+    icon: fa-solid fa-palette
     items:
-      - name: Service 1
-        subtitle: This is Service 1
-        url: http://localhost:8000/
-        tag: Docker
-        icon: no-icon
-      - name: Service 2
-        subtitle: This is Service 2
-        url: http://localhost:8000/
-        icon: other-icon
-        tag: Other
-      - name: Service 3
+      - name: Red Service
+        subtitle: I'm red..
+        url: http://localhost/
+        tag: Red
+        icon: R
+      - name: Green Service
+        subtitle: I'm green..
+        url: http://localhost/
+        icon: G
+        tag: Green
+      - name: Blue Service
+        subtitle: I'm blue..
+        url: http://localhost/
+        icon: B
+        tag: Blue
+
 
   - name: Dummy Group 1
     icon: fa-solid fa-house
