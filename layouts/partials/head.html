@@ -15,9 +15,8 @@
 {{ $styles := resources.Get "style.css" }}
 {{ $stylesMin := $styles | resources.Minify }}
 <link rel="stylesheet" href="{{ $stylesMin.RelPermalink }}">
-{{ $fontawesome := resources.Get "fontawesome/all.js" }}
-{{ $fontawesomeMin := $fontawesome | resources.Minify }}
-<script defer src="{{ $fontawesomeMin.RelPermalink }}"></script>
+{{ $fontawesome := resources.Get "fontawesome/all.min.js" }}
+<script defer src="{{ $fontawesome.RelPermalink }}"></script>
 
 {{ $icon := resources.Get (printf "icons/%s.svg" .Site.Data.config.icon) }}
 {{ $iconMin := $icon | resources.Minify }}
