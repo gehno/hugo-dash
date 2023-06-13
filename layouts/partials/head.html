@@ -13,11 +13,14 @@
 
 
 {{ $styles := resources.Get "style.css" }}
-<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
-{{ $fontawesome := resources.Get "fontawesome/all.min.js" }}
-<script defer src="{{ $fontawesome.RelPermalink }}"></script>
+{{ $stylesMin := $styles | resources.Minify }}
+<link rel="stylesheet" href="{{ $stylesMin.RelPermalink }}">
+{{ $fontawesome := resources.Get "fontawesome/all.js" }}
+{{ $fontawesomeMin := $fontawesome | resources.Minify }}
+<script defer src="{{ $fontawesomeMin.RelPermalink }}"></script>
 
 {{ $icon := resources.Get (printf "icons/%s.svg" .Site.Data.config.icon) }}
-{{ if $icon }}
-<link rel="icon" type="image/x-icon" href="{{$icon.RelPermalink}}">
+{{ $iconMin := $icon | resources.Minify }}
+{{ if $iconMin }}
+<link rel="icon" type="image/x-icon" href="{{$iconMin.RelPermalink}}">
 {{ end }}

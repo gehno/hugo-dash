@@ -1,7 +1,8 @@
 <div>
     {{ $param := printf "icons/%s.svg" . }}
     {{ $noIcon := resources.Get "icons/no-icon.svg" }}
-    {{ $icon := resources.Get $param }}
-    {{ $result :=  $icon | default $noIcon }}
-    <img class="w-12 h-12" src="{{ $result.RelPermalink }}" alt="{{.}}" class="w-96">
+    {{ $noIconMin := $noIcon | resources.Minify }}
+    {{ $icon := resources.Get $param | default $noIcon }}
+    {{ $iconMin := $icon | resources.Minify }}
+    <img class="w-12 h-12" src="{{ $iconMin.RelPermalink }}" alt="{{.}}" class="w-96">
 </div>
