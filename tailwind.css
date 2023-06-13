@@ -76,3 +76,6 @@ dark:bg-secondary-800 dark:bg-opacity-50 dark:text-white;
   group-hover:w-16 
   bg-highlight-400 text-white;
 }
+.svg-icon {
+  @apply fill-black dark:fill-white;
+}

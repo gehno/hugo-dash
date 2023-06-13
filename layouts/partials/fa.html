@@ -1,1 +1,19 @@
-<i class="h-{{.size}} {{.icon}}"></i>
+<div>
+    {{ $map:=(split .icon " ")}}
+
+    {{ $faType:=index $map 0}}
+    {{ $faType:=split $faType "-"}}
+    {{ $faType:=index $faType 1}}
+
+    {{ $faIcon:=index $map 1}}
+    {{ $faIcon:= split $faIcon "-"}}
+    {{ $faIcon:= index $faIcon 1}}
+    {{ $param := printf "fontawesome/%s/%s.svg" $faType $faIcon }}
+    {{ $noIcon := resources.Get "icons/no-icon.svg" }}
+    {{ $noIconMin := $noIcon | resources.Minify }}
+    {{ $icon := resources.Get $param | default $noIcon }}
+    {{ $iconMin := $icon | resources.Minify }}
+    <div class="w-{{.size}} h-{{.size}} svg-icon">
+        {{safeHTML $iconMin.Content}}
+    </div>
+</div>
