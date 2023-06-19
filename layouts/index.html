@@ -6,7 +6,9 @@
       {{ range .Site.Data.config.links }}
       <a href="{{.url}}" target="_blank" class="nav-item">
         <div class="w-6 h-6">{{ partial "fa"  (dict "icon" .icon "size" 6 )}}</div>
+        {{if .name}}
         <div class="font-bold">{{.name}}</div>
+        {{end}}
       </a>
       {{ end }}
     </div>

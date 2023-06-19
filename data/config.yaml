@@ -10,6 +10,9 @@ links:
   - name: Hugo-Dash
     url: https://github.com/gehno/hugo-dash/
     icon: fa-brands fa-github
+
+  - url: https://github.com/gehno/hugo-dash/
+    icon: fa-brands fa-docker
     
 services:
   - name: Color Services
