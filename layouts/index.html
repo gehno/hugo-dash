@@ -5,7 +5,7 @@
     <div class="nav-bar">
       {{ range .Site.Data.config.links }}
       <a href="{{.url}}" target="_blank" class="nav-item">
-        <div class="w-6 h-6">{{ partial "fa"  (dict "icon" .icon "size" 6 )}}</div>
+        <div class="w-6 h-6">{{ partial "fa"  (dict "icon" .icon )}}</div>
         {{if .name}}
         <div class="font-bold">{{.name}}</div>
         {{end}}
@@ -19,14 +19,14 @@
   {{range .Site.Data.config.services}}
   <div class="card-group">
     <div class="card-group-text">
-      <div class="h-9 w-9">{{ partial "fa" (dict "icon" .icon "size" 9 )}}</div>
+      <div class="h-9 w-9">{{ partial "fa" (dict "icon" .icon )}}</div>
       <div class="text-2xl font-semibold">{{.name}}</div>
     </div>
 
     <div>
       {{ range .items }}
       <a class="link-card group" href="{{.url}}" target="_blank">
-        <div>{{partial "svg" .icon }}</div>
+        {{partial "svg" .icon }}
         <div>
           <p class="text-xl font-semibold">{{.name}}</p>
           <p class="text-base">{{.subtitle}}</p>

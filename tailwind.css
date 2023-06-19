@@ -79,3 +79,6 @@ dark:bg-secondary-800 dark:bg-opacity-50 dark:text-white;
 .svg-icon {
   @apply fill-black dark:fill-white;
 }
+svg {
+  @apply w-auto h-auto;
+}
