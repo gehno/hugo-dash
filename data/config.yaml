@@ -36,7 +36,7 @@ services:
 
 
   - name: Dummy Group 1
-    icon: fa-solid fa-house
+    icon: fa-solid fa-network-wired
     items:
       - name: Service 1
       - name: Service 2

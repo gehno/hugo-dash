@@ -2,13 +2,12 @@
     {{ $map:=(split .icon " ")}}
 
     {{ $faType:=index $map 0}}
-    {{ $faType:=split $faType "-"}}
-    {{ $faType:=index $faType 1}}
+    {{ $faType:=strings.TrimPrefix "fa-" $faType}}
 
     {{ $faIcon:=index $map 1}}
-    {{ $faIcon:= split $faIcon "-"}}
-    {{ $faIcon:= index $faIcon 1}}
+    {{ $faIcon:= strings.TrimPrefix "fa-" $faIcon}}
     {{ $param := printf "fontawesome/%s/%s.svg" $faType $faIcon }}
+    
     {{ $noIcon := resources.Get "icons/no-icon.svg" }}
     {{ $noIconMin := $noIcon | resources.Minify }}
     {{ $icon := resources.Get $param | default $noIcon }}
