@@ -71,7 +71,6 @@ services:
       - name: Service 3
 
   - name: Dummy Group 6
-    icon: fa-solid fa-house
     items:
       - name: Service 1
       - name: Service 2

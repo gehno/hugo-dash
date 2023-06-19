@@ -12,12 +12,10 @@
 {{ end }}
 
 
-{{ $styles := resources.Get "style.css" }}
-{{ $stylesMin := $styles | resources.Minify }}
-<link rel="stylesheet" href="{{ $stylesMin.RelPermalink }}">
+{{ $styles := resources.Get "style.css" | resources.Minify }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 
-{{ $icon := resources.Get (printf "icons/%s.svg" .Site.Data.config.icon) }}
-{{ $iconMin := $icon | resources.Minify }}
-{{ if $iconMin }}
-<link rel="icon" type="image/x-icon" href="{{$iconMin.RelPermalink}}">
+{{ $icon := resources.Get (printf "icons/%s.svg" .Site.Data.config.icon) | resources.Minify }}
+{{ if $icon }}
+<link rel="icon" type="image/x-icon" href="{{$icon.RelPermalink}}">
 {{ end }}
