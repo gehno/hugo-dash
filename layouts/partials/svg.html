@@ -1,4 +1,4 @@
-<div class="flex w-12 h-12 svg-icon">
+<div class="flex w-12 h-12">
     {{ $param := printf "icons/%s.svg" . }}
     {{ $noIcon := resources.Get "icons/no-icon.svg" | resources.Minify }}
     {{ $icon := resources.Get $param | default $noIcon | resources.Minify }}
