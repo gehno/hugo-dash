@@ -1,16 +1,15 @@
 {
-  "name": "dashboard",
+  "name": "hugo-dash",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "npx tailwindcss -i ./tailwind.css -o ./assets/style.css",
     "watch": "npx tailwindcss -i ./tailwind.css -o ./assets/style.css --watch"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "gehno",
+  "license": "MIT",
   "devDependencies": {
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "3.3.2"
   }
 }

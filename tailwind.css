@@ -48,13 +48,7 @@ dark:bg-secondary-800 dark:bg-opacity-50 dark:text-white;
 }
 
 .card-layout {
-  @apply grid grid-cols-1 
-  md:grid-cols-2 
-  lg:grid-cols-3 
-  2xl:grid-cols-4
-  3xl:grid-cols-5
-  4xl:grid-cols-6
-  5xl:grid-cols-7;
+  @apply flex justify-center flex-wrap;
 }
 
 .card-group {
