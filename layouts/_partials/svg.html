@@ -1,0 +1,6 @@
+<div class="flex w-12 h-12">
+    {{ $iconName := . | default "no-icon" }}
+    {{ $param := printf "icons/%s.svg" $iconName }}
+    {{ $icon := resources.Get $param | resources.Minify }}
+    {{safeHTML $icon.Content}}
+</div>

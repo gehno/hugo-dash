@@ -1,7 +1,0 @@
-<div class="flex w-12 h-12">
-    {{ $param := printf "icons/%s.svg" . }}
-    {{ $noIcon := resources.Get "icons/no-icon.svg" | resources.Minify }}
-    {{ $icon := resources.Get $param | default $noIcon | resources.Minify }}
-    {{/* <img class="w-12 h-12" src="{{ $iconMin.RelPermalink }}" alt="{{.}}" class="w-96"> */}}
-    {{safeHTML $icon.Content}}
-</div>
